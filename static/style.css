@@ -1,0 +1,62 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: #f4f4f4;
+  margin: 1.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  color: #444;
+}
+
+form {
+  background: white;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3125rem;
+}
+
+.button {
+  margin-top: 0.9375rem;
+  padding: 0.625rem 1.25rem;
+  background-color: #95b7db; /* Exemplo de cor de fundo */
+  color: white; /* Exemplo de cor do texto */
+  text-decoration: none; /* Remove o sublinhado padrão do link */
+  border-radius: 0.3125rem; /* Bordas arredondadas */
+  display: inline-block; /* Permite aplicar padding e margin como um bloco */
+  text-align: center;
+  border: none; /* Remove a borda padrão do botão */
+  cursor: pointer; /* Indica que é clicável */
+}
+
+img {
+  max-width: 100%;
+  width: 25rem;
+  border-radius: 0.9375rem;
+}
+
+.borda {
+  width: auto;
+  width: 25%;
+  max-width: 50%;
+  border-radius: 0;
+}
+
+.resultado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}

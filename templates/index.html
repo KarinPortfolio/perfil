@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quiz de Personalidade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Que tipo de parceiro(a) você é?</h1>
+    <img src="{{ url_for('static', filename='images/perfil.jpg') }}" />
+    <form method="POST" action="/resultado">
+      <p>1. Você prefere passar o tempo livre:</p>
+      <label
+        ><input type="radio" name="q1" value="A" required /> Com meu par</label
+      ><br />
+      <label><input type="radio" name="q1" value="B" /> Sozinho</label><br />
+      <label
+        ><input type="radio" name="q1" value="C" /> Planejando a rotina</label
+      ><br />
+      <label><input type="radio" name="q1" value="D" /> Sem pensar muito</label
+      ><br />
+
+      <p>2. Quando está em um conflito, você:</p>
+      <label
+        ><input type="radio" name="q2" value="A" required /> Tenta resolver com
+        carinho</label
+      ><br />
+      <label
+        ><input type="radio" name="q2" value="B" /> Prefere resolver
+        sozinho</label
+      ><br />
+      <label
+        ><input type="radio" name="q2" value="C" /> Quer controlar a
+        situação</label
+      ><br />
+      <label><input type="radio" name="q2" value="D" /> Evita o assunto</label
+      ><br />
+
+      <p>3. Em um relacionamento, você valoriza mais:</p>
+      <label
+        ><input type="radio" name="q3" value="A" required /> Conexão
+        emocional</label
+      ><br />
+      <label><input type="radio" name="q3" value="B" /> Liberdade</label><br />
+      <label><input type="radio" name="q3" value="C" /> Estabilidade</label
+      ><br />
+      <label><input type="radio" name="q3" value="D" /> Diversão</label><br />
+
+      <p>4. Você se considera uma pessoa:</p>
+      <label><input type="radio" name="q4" value="A" required /> Afetiva</label
+      ><br />
+      <label><input type="radio" name="q4" value="B" /> Reservada</label><br />
+      <label><input type="radio" name="q4" value="C" /> Organizada</label><br />
+      <label><input type="radio" name="q4" value="D" /> Espontânea</label><br />
+
+      <p>5. Seu par ideal seria alguém que:</p>
+      <label
+        ><input type="radio" name="q5" value="A" required /> Demonstre amor
+        frequentemente</label
+      ><br />
+      <label><input type="radio" name="q5" value="B" /> Te dê espaço</label
+      ><br />
+      <label
+        ><input type="radio" name="q5" value="C" /> Siga regras claras</label
+      ><br />
+      <label><input type="radio" name="q5" value="D" /> Te surpreenda</label
+      ><br />
+
+      <br />
+      <button type="submit" class="button">Ver meu perfil</button>
+    </form>
+  </body>
+</html>

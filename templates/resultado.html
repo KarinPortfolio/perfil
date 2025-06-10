@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Seu Perfil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="resultado">
+      <h1>Seu perfil dominante é: <span>{{ perfil }}</span></h1>
+
+      {% if perfil == "Afetivo" %}
+
+      <img src="{{ url_for('static', filename='images/afetiva.jpg') }}" />
+      <p>Você valoriza carinho, conexão emocional e proximidade.</p>
+      {% elif perfil == "Independente" %}
+      <img src="{{ url_for('static', filename='images/independente.jpg') }}" />
+      <p>Você preza pela autonomia e respeita os próprios espaços.</p>
+      {% elif perfil == "Controlador" %}
+      <img src="{{ url_for('static', filename='images/controladora.jpg') }}" />
+      <p>Você busca estabilidade e gosta de manter o controle da situação.</p>
+      {% elif perfil == "Desatento" %}
+      <img src="{{ url_for('static', filename='images/desatenta.jpg') }}" />
+      <p>Você é leve e espontâneo, mas pode parecer desligado.</p>
+      {% else %}
+      <p>Perfil não identificado. Tente novamente.</p>
+      {% endif %}
+
+      <img
+        class="borda"
+        src="{{ url_for('static', filename='images/borda.png') }}"
+      />
+      <h2>Distribuição dos Perfis (até agora):</h2>
+      <div class="resultado">
+        <h2>Distribuição dos Perfis (até agora):</h2>
+        {% if grafico_base64 %}
+        <img
+          src="data:image/png;base64,{{ grafico_base64 }}"
+          alt="Gráfico de Perfis"
+        />
+        {% else %}
+        <p>Não há dados suficientes para gerar o gráfico.</p>
+        {% endif %}
+      </div>
+      <img
+        class="borda"
+        src="{{ url_for('static', filename='images/borda.png') }}"
+      />
+      <img src="{{ url_for('static', filename='images/total.jpg') }}" />
+      <a href="/" class="button">Refazer o quiz</a>
+    </div>
+  </body>
+</html>
